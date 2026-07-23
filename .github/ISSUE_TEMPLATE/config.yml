@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Landing + waitlist
+    url: https://kotakbiasa.github.io/devflow/
+    about: Product page (Founding Pro only after you try a free handoff).
+  - name: Sample handoffs
+    url: https://github.com/kotakbiasa/devflow/issues/1
+    about: Public free handoff samples on real PR ranges.

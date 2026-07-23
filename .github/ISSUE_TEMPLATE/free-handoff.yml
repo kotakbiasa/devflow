@@ -1,0 +1,41 @@
+name: Free public-PR handoff
+description: Request a free DevFlow handoff on a public PR (portable markdown).
+title: "Free handoff: <owner/repo#number>"
+labels: ["free-handoff"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        DevFlow turns a **public** git range into portable handoff markdown (client / junior / reviewer).
+        Not chat. No signup. We will not spam your PR thread — artifact is delivered here or as a gist.
+  - type: input
+    id: pr_url
+    attributes:
+      label: Public PR URL
+      description: Full HTTPS URL to an open or merged public pull request.
+      placeholder: https://github.com/org/repo/pull/123
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Audience for the handoff
+      options:
+        - client
+        - junior
+        - reviewer
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Extra context (optional)
+      description: Anything the handoff should emphasize for the next human.
+  - type: checkboxes
+    id: public_ok
+    attributes:
+      label: Confirm
+      options:
+        - label: This PR is public and I want a free portable markdown handoff (not a sales call).
+          required: true

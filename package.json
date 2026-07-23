@@ -1,0 +1,56 @@
+{
+  "name": "devflow",
+  "version": "0.1.0",
+  "description": "Git-native handoff & shipping-artifact CLI \u2014 portable walkthroughs your next human can trust",
+  "type": "module",
+  "bin": {
+    "devflow": "./bin/devflow.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "start": "node bin/devflow.js",
+    "handoff": "node bin/devflow.js handoff",
+    "explain": "node bin/devflow.js explain",
+    "pr": "node bin/devflow.js pr",
+    "dogfood": "node bin/devflow.js handoff --audience reviewer --out samples/dogfood-handoff.md",
+    "landing:serve": "npx --yes serve landing -l 4173",
+    "test": "node --test dist/**/*.test.js 2>/dev/null || node --test src/**/*.test.js 2>/dev/null || echo 'no unit tests yet'",
+    "prepublishOnly": "npm run build",
+    "prepare": "node -e \"const fs=require('fs');if(!fs.existsSync('dist/cli/index.js')){require('child_process').execSync('npm run build',{stdio:'inherit'})}\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "cli",
+    "git",
+    "handoff",
+    "documentation",
+    "developer-tools",
+    "anthropic",
+    "byok"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kotakbiasa/devflow.git"
+  },
+  "homepage": "https://kotakbiasa.github.io/devflow/",
+  "bugs": {
+    "url": "https://github.com/kotakbiasa/devflow/issues"
+  }
+}
