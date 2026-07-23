@@ -38,19 +38,20 @@
     "byok"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotakbiasa/devflow.git"
+  },
+  "homepage": "https://kotakbiasa.github.io/devflow/",
+  "bugs": {
+    "url": "https://github.com/kotakbiasa/devflow/issues"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
-    "typescript": "^5.7.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kotakbiasa/devflow.git"
-  },
-  "homepage": "https://kotakbiasa.github.io/devflow/",
-  "bugs": {
-    "url": "https://github.com/kotakbiasa/devflow/issues"
+    "typescript": "^5.7.3",
+    "wrangler": "^3.114.17"
   }
 }

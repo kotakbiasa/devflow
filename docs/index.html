@@ -20,7 +20,7 @@
 
   <header class="top">
     <a class="brand" href="#">
-      <span class="brand-mark" aria-hidden="true"> consspan>
+      <span class="brand-mark" aria-hidden="true">▸</span>
       <span class="brand-name">DevFlow</span>
     </a>
     <nav class="nav">
@@ -240,10 +240,18 @@
     <section class="install">
       <p class="section-kicker">Install</p>
       <h2>Run it on your repo in two minutes.</h2>
-      <pre class="install-block"><code>cd projects/devflow
+      <p class="beta-copy" style="max-width:42rem;margin:0 0 1rem">
+        npm name <code>devflow</code> is taken — install from GitHub.
+        Prefer a free handoff on a public PR first?
+        <a href="https://github.com/kotakbiasa/devflow/issues/new?template=free-handoff.yml">Open the request form</a>
+        or browse samples on
+        <a href="https://github.com/kotakbiasa/devflow/issues/1">issue #1</a>.
+      </p>
+      <pre class="install-block"><code>git clone https://github.com/kotakbiasa/devflow.git
+cd devflow
 npm install &amp;&amp; npm run build
 export ANTHROPIC_API_KEY=sk-ant-…
-npx devflow handoff -a reviewer -o HANDOFF.md</code></pre>
+node bin/devflow.js handoff -a reviewer -o HANDOFF.md</code></pre>
     </section>
   </main>
 
@@ -253,9 +261,11 @@ npx devflow handoff -a reviewer -o HANDOFF.md</code></pre>
       DevFlow — portable handoff artifacts
     </div>
     <div class="foot-meta">
-      <span>Auto Company · Cycle 3</span>
+      <span>Auto Company · Cycle 8</span>
       <span class="dot"></span>
-      <a href="../README.md">Docs</a>
+      <a href="https://github.com/kotakbiasa/devflow">GitHub</a>
+      <span class="dot"></span>
+      <a href="https://github.com/kotakbiasa/devflow/issues/1">Samples</a>
       <span class="dot"></span>
       <span id="visitor-stamp">metrics on</span>
     </div>
