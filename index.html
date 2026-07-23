@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevFlow — Portable handoff artifacts for AI-era code</title>
+  <meta name="description" content="Stop re-explaining AI-generated code. One CLI command → client-ready walkthrough + PR narrative. Outside any single IDE. Founding Pro $9/mo." />
+  <meta property="og:title" content="DevFlow — handoff packets, not chat" />
+  <meta property="og:description" content="One CLI command → portable walkthrough your next human can trust when Cursor is closed." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Schibsted+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231a1f16'/%3E%3Cpath d='M8 22V10h3.2l4.3 7.2L19.8 10H23v12h-2.6v-7.1l-3.9 6.3h-1.1l-3.9-6.3V22H8z' fill='%23e8ff6b'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="brand" href="#">
+      <span class="brand-mark" aria-hidden="true"> consspan>
+      <span class="brand-name">DevFlow</span>
+    </a>
+    <nav class="nav">
+      <a href="#how">How</a>
+      <a href="#not-chat">Not chat</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#beta" class="nav-cta">Founding Pro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">
+        <span class="pulse"></span>
+        Git-native · BYOK · 10 beta seats open
+      </p>
+      <h1>
+        Stop re-explaining<br />
+        <em>AI-generated</em> code.
+      </h1>
+      <p class="lede">
+        One CLI command → a portable walkthrough your next human can trust —
+        <strong>when Cursor is closed</strong>. Client handoffs. PR narratives. Junior maps.
+        Not another chat panel.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#beta">Get early access — $9/mo</a>
+        <a class="btn btn-ghost" href="#demo">See the artifact</a>
+      </div>
+      <div class="hero-meta">
+        <span>Free forever with your own API key</span>
+        <span class="dot"></span>
+        <span>Founding Pro limited to 50–100</span>
+      </div>
+    </section>
+
+    <section class="terminal-band" id="demo" aria-label="CLI demo">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span></span><span></span><span></span>
+          <code>devflow handoff —audience client</code>
+        </div>
+        <pre class="terminal-body"><span class="t-muted">$ export ANTHROPIC_API_KEY=sk-ant-…</span>
+<span class="t-cmd">$ devflow handoff -a client -o HANDOFF.md</span>
+<span class="t-ok">Wrote ./HANDOFF.md</span>
+<span class="t-muted">DevFlow handoff · audience=client · claude-haiku · 2.1s</span>
+
+<span class="t-file"># Handoff: checkout-api (main @ a3f91c)</span>
+<span class="t-file">## TL;DR</span>
+<span class="t-file">Payment webhook now retries with idempotency keys.</span>
+<span class="t-file">Clients can re-send the same event safely.</span>
+<span class="t-file">## How to verify</span>
+<span class="t-file">- [ ] Replay stripe CLI fixture twice → one charge</span>
+<span class="t-file">- [ ] Read src/webhooks/stripe.ts:88</span></pre>
+      </div>
+      <p class="terminal-caption">
+        Durable markdown on disk. Commit it. Email it. Paste it on the PR.
+        The value is the <em>file</em>, not the session.
+      </p>
+    </section>
+
+    <section class="split" id="not-chat">
+      <div class="split-copy">
+        <p class="section-kicker">Differentiation test</p>
+        <h2>If they say “I already do this in Cursor,” we failed.</h2>
+        <p>
+          Interactive explain is free inside every major coding agent.
+          DevFlow only wins when the artifact is useful <strong>outside</strong>
+          the IDE — for the client who never installed Cursor, the junior on
+          JetBrains, the reviewer on a phone, future-you in three months.
+        </p>
+      </div>
+      <div class="compare">
+        <article class="card dead">
+          <h3>Dead SKU</h3>
+          <ul>
+            <li>Chat with codebase</li>
+            <li>Ephemeral Q&amp;A</li>
+            <li>Locked to one IDE index</li>
+            <li>Competes with Cursor free features</li>
+          </ul>
+        </article>
+        <article class="card live">
+          <h3>DevFlow wedge</h3>
+          <ul>
+            <li>Handoff / shipping packet</li>
+            <li>Markdown you commit &amp; share</li>
+            <li>Git-aware, tool-agnostic CLI</li>
+            <li>Complements every IDE</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <p class="section-kicker">How it works</p>
+      <h2 class="center">Three commands. One job.</h2>
+      <div class="steps">
+        <article class="step">
+          <span class="step-n">01</span>
+          <h3><code>devflow handoff</code></h3>
+          <p>Client / junior / future-self packet from git context. Diffs, commits, risk, verify steps.</p>
+        </article>
+        <article class="step">
+          <span class="step-n">02</span>
+          <h3><code>devflow pr</code></h3>
+          <p>Reviewer-grade PR narrative: motivation, risk hotspots, test plan — paste into GitHub.</p>
+        </article>
+        <article class="step">
+          <span class="step-n">03</span>
+          <h3><code>devflow explain</code></h3>
+          <p>Same durable walkthrough shape. Explicitly <em>not</em> an interactive REPL.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="audiences">
+      <div class="audience-grid">
+        <div>
+          <p class="section-kicker">Audience modes</p>
+          <h2>Same diff.<br />Four readers.</h2>
+        </div>
+        <ul class="audience-list">
+          <li><strong>client</strong> — outcomes, risk, how to accept the deliverable</li>
+          <li><strong>junior</strong> — map, pitfalls, where to extend safely</li>
+          <li><strong>reviewer</strong> — intent, hotspots, merge gates</li>
+          <li><strong>future-self</strong> — why decisions held; re-enter in 10 minutes</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <p class="section-kicker center">Pricing</p>
+      <h2 class="center">Ramen-honest pricing.</h2>
+      <div class="price-grid">
+        <article class="price-card">
+          <h3>Free</h3>
+          <p class="price"><span>$0</span></p>
+          <p class="price-note">BYOK · unlimited local</p>
+          <ul>
+            <li>Full CLI</li>
+            <li>Your Anthropic key</li>
+            <li>Offline skeleton without a key</li>
+          </ul>
+        </article>
+        <article class="price-card featured">
+          <p class="badge">Founding · first 50–100</p>
+          <h3>Founding Pro</h3>
+          <p class="price"><span>$9</span><small>/mo</small></p>
+          <p class="price-note">Locks $9 while founding cohort open</p>
+          <ul>
+            <li>Everything in Free</li>
+            <li>Hosted sessions (capped) later</li>
+            <li>Priority beta seats</li>
+            <li>Shape the templates</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="#beta">Claim founding seat</a>
+        </article>
+        <article class="price-card">
+          <h3>Pro</h3>
+          <p class="price"><span>$19</span><small>/mo</small></p>
+          <p class="price-note">List price after founding</p>
+          <ul>
+            <li>Higher hosted caps</li>
+            <li>Team share later</li>
+            <li>Priority support</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="beta" id="beta">
+      <div class="beta-panel">
+        <div>
+          <p class="section-kicker">Waitlist + WTP test</p>
+          <h2>10 beta seats.<br />Founding Pro $9.</h2>
+          <p class="beta-copy">
+            Built for agencies, freelancers, and multi-tool solos who ship AI-assisted
+            code to people who do not share their IDE. Tell us what you’d pay —
+            this is the demand test, not a vanity counter.
+          </p>
+          <ul class="beta-checks">
+            <li>CLI ships today (BYOK)</li>
+            <li>Kill metrics instrumented day one</li>
+            <li>If wedge fails in 2 weeks, we pivot — no sunk-cost theater</li>
+          </ul>
+        </div>
+        <form id="waitlist-form" class="waitlist" novalidate>
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="you@agency.dev" autocomplete="email" />
+          </label>
+          <fieldset>
+            <legend>I would pay for this</legend>
+            <div class="wtp">
+              <label><input type="radio" name="wtp" value="0" /> $0</label>
+              <label><input type="radio" name="wtp" value="9" checked /> $9</label>
+              <label><input type="radio" name="wtp" value="19" /> $19</label>
+              <label><input type="radio" name="wtp" value="29" /> $29</label>
+            </div>
+          </fieldset>
+          <label>
+            Why do you need handoffs? <span class="opt">(optional)</span>
+            <textarea name="why" rows="3" placeholder="Client deliverables, PR review load, junior onboarding…"></textarea>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="handoff_need" value="1" />
+            I need this for <strong>client / teammate handoff</strong> (not IDE chat)
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">Request founding access</button>
+          <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-fine">No spam. Kill criteria public in the repo. Privacy: email + WTP only.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="install">
+      <p class="section-kicker">Install</p>
+      <h2>Run it on your repo in two minutes.</h2>
+      <pre class="install-block"><code>cd projects/devflow
+npm install &amp;&amp; npm run build
+export ANTHROPIC_API_KEY=sk-ant-…
+npx devflow handoff -a reviewer -o HANDOFF.md</code></pre>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div>
+      <span class="brand-mark sm" aria-hidden="true">▸</span>
+      DevFlow — portable handoff artifacts
+    </div>
+    <div class="foot-meta">
+      <span>Auto Company · Cycle 3</span>
+      <span class="dot"></span>
+      <a href="../README.md">Docs</a>
+      <span class="dot"></span>
+      <span id="visitor-stamp">metrics on</span>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
